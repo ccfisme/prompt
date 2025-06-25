@@ -1,4 +1,5 @@
 # 在那个 DeepSeek API 的代码示例中，你确实没有看到像 get_completion 这样的额外封装函数。那是因为这段 DeepSeek 代码已经足够简洁和直接，它本身就完成了与 API 交互的完整流程
+```
 # import requests
 
 # API_KEY = "sk-6c36a52d4a8e4548b682e3c5bee0d148"  
@@ -28,10 +29,10 @@
 #     print(result['choices'][0]['message']['content'])
 # else:
 #     print("请求失败，错误码：", response.status_code)
-
-
+```
 
 # 相对于更复杂的 LLM 应用，比如那些需要“工具使用”或“多步规划”的 Agent 而言：这段 DeepSeek 代码确实没有涉及到辅助 LLM 进行复杂任务处理的函数
+```
 # import requests
 
 # def call_deepseek_api(messages_content, model_name="deepseek-reasoner", temperature=0):
@@ -59,10 +60,11 @@
 # my_other_prompt = [{"role": "user", "content": "用英文问候"}]
 # greeting = call_deepseek_api(my_other_prompt, model_name="deepseek-chat", temperature=0.7)
 # print(greeting)
-
+```
 
 
 # 多轮对话
+```
 # import requests
 
 # def call_deepseek_api(messages_content, model_name="deepseek-reasoner", temperature=0):
@@ -88,11 +90,12 @@
 #     {"role": "user", "content": "请继续补充第二段"}]
 # poem = call_deepseek_api(my_prompt)
 # print(poem)
-
+```
 
 
 
 # # 流式传输模式就是 AI 模型在生成回复时，不是一次性给你最终答案，而是像水流一样，一点一点地把内容传输给你。 这种模式在构建流畅、响应迅速的 AI 应用（尤其是聊天界面）时非常有用。
+```
 # import requests
 
 # def call_deepseek_api(messages_content, model_name="deepseek-reasoner", temperature=0):
@@ -122,3 +125,4 @@
 #     {"role": "user", "content": "请继续补充第二段"}]
 # poem = call_deepseek_api(my_prompt)
 # print(poem)
+```
